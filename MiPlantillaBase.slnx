@@ -1,0 +1,6 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/MiPlantillaBase.Tests/MiPlantillaBase.Tests.csproj" />
+    <Project Path="src/MiPlantillaBase/MiPlantillaBase.csproj" />
+  </Folder>
+</Solution>

@@ -1,0 +1,29 @@
+<Page
+    x:Class="MiPlantillaBase.Features.Dashboard.DashboardPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <StackPanel Padding="24" Spacing="16">
+        <TextBlock
+            Text="{x:Bind ViewModel.PageTitle, Mode=OneWay}"
+            Style="{StaticResource TitleTextBlockStyle}" />
+
+        <TextBlock
+            Text="{x:Bind ViewModel.StatusMessage, Mode=OneWay}"
+            Style="{StaticResource BodyTextBlockStyle}" />
+
+        <TextBlock>
+            <Run Text="Items loaded: " />
+            <Run Text="{x:Bind ViewModel.ItemsLoaded, Mode=OneWay}" />
+        </TextBlock>
+
+        <StackPanel Orientation="Horizontal" Spacing="8">
+            <Button
+                Content="Load Data"
+                Command="{x:Bind ViewModel.LoadDataCommand}" />
+            <Button
+                Content="Reset"
+                Command="{x:Bind ViewModel.ResetCommand}" />
+        </StackPanel>
+    </StackPanel>
+</Page>

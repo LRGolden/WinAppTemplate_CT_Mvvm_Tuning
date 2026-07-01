@@ -1,0 +1,29 @@
+<Window
+    x:Class="MiPlantillaBase.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="MiPlantillaBase">
+
+    <Grid>
+        <NavigationView
+            x:Name="NavView"
+            PaneDisplayMode="Left"
+            IsBackButtonVisible="Collapsed"
+            IsSettingsVisible="False"
+            ItemInvoked="OnNavItemInvoked"
+            Loaded="OnNavLoaded">
+
+            <NavigationView.MenuItems>
+                <NavigationViewItem Tag="Dashboard" Content="Dashboard">
+                    <NavigationViewItem.Icon>
+                        <SymbolIcon Symbol="Home" />
+                    </NavigationViewItem.Icon>
+                </NavigationViewItem>
+            </NavigationView.MenuItems>
+
+            <ScrollViewer>
+                <Frame x:Name="ContentFrame" />
+            </ScrollViewer>
+        </NavigationView>
+    </Grid>
+</Window>
